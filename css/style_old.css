@@ -1,0 +1,361 @@
+html{
+	height: 100%;
+}
+body{
+	margin: 0;
+	height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+}
+#pageslider{
+	position: relative;
+	margin: auto;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+}
+#pageslider div.ul{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+div.ul>div{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	direction: rtl;
+	background-color: transparent;
+}
+div.ul>div:nth-child(2){
+    background-color: white;
+}
+div.ul>div:nth-child(4){
+    background-color: white;
+}
+.slider-button{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 95px;
+	background: linear-gradient(180deg, transparent 0%, #111 100%);
+	opacity: 0.75;
+	display: none;
+	cursor: pointer;
+	align-content: center;
+	text-align: center;
+	font-size: 23px;
+	font-weight: 400;
+	line-height: 5;
+	color: white;
+	direction: rtl;
+}
+.arrow{
+	position: relative;
+}
+.container{
+	display: flex;
+    flex-grow: 1;
+	margin: 100px 50px 100px 50px ;
+	box-shadow: 0px 1px 3px 2px #e3e3e3;
+}
+.navbar{
+	display: flex;
+	flex-flow: column;
+	width: 20%;
+	border-left: 1px #D4D4D4 solid;
+}
+.navbar>div{
+	text-align: center;
+	padding: 30px 0 30px  0;
+    transition: all 0.35s ease;
+    font-size: 20px;
+    font-weight: 450;
+    cursor: pointer;
+}
+.navbar>div:hover{
+	padding: 35px 0 35px  0;
+	font-size: 23px;
+    box-shadow: 0px 0px 10px 5px #d1d1d1;
+}
+div.navbar>div[active=active]{
+	padding: 40px 0 40px  0;
+	font-size: 26px;
+    box-shadow: 0px 0px 10px 5px #d1d1d1;
+}
+.content{
+	flex-grow: 1;
+	margin: 35px 35px 35px 35px;
+	overflow: auto;
+}
+div.content>div{
+	display: flex;
+	flex-flow: column;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+	display: none;
+}
+div.content>div[active=active]{
+	display: flex !important;
+}
+div.pageindicator{
+	position: fixed;
+	width: 28px;
+    display: flex;
+    flex-flow: column;
+	right: 10px;
+	top: 48%;
+	order: 0;
+}
+.dots{
+	margin: 12px 10px 0 10px;
+    height: 8px;
+    width: 8px;
+	border-radius: 4.5px;
+	background-color: #333;
+	transition: all 0.3s;
+}
+div.dots:hover{
+	box-shadow: 0px 0px 0px 4.6px #d1d1d1;
+	cursor: pointer;
+}
+div.dots[active=active]{
+	box-shadow: 0px 0px 0px 4.6px #d1d1d1;
+}
+div.ul>div:first-child>div.container{
+    display: block;
+    box-shadow: none;
+}
+.bac{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    
+}
+.arm{
+    height: 200px;
+    width: 55%;
+    box-shadow: 0px 0px 15px #000;
+    border-radius: 25px;
+}
+.title{
+    margin: 4.5rem 4.5rem 0 0;
+    color: #F3EBEB;
+}
+span{
+    font-size: 10px;
+    background-color: #CCCCCC;
+    color: #333;
+    font-weight: 200;
+    vertical-align: middle;
+    padding: 2px 4px 2px 2px;
+    border-radius: 2px;
+}
+.spilitter{
+    position: absolute;
+    right: -10%;
+    bottom: -50px;
+    width: 120%;
+    transform: rotate(3deg);
+    height: 110px;
+    background-color: white;
+}
+.spilitter:first-of-type{
+	bottom: unset;
+	top: -50px;
+}
+.bio{
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 2;
+    text-align: justify;
+    max-height: 100%;
+    color: #F3EBEB;
+}
+.porto{
+	display: flex;
+	flex-flow: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+	margin: 110px 250px 110px 250px ;
+}
+div.porto>div{
+	overflow: hidden;
+	margin-top: 12.5px; 
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 25px;
+	box-shadow: 0px 0px 20px #222;
+}
+div.captions{
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	width: 100%;
+	top: 100%;
+	background-color: rgba(0,0,0,0.5);
+	text-align: center;
+	font-size: 1.4rem;
+	color: #fff;
+	text-shadow: 0px 0px 10px #222;
+	font-weight: 350;
+    padding-top: 25px;
+	cursor: pointer;
+}
+marquee.pro{
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    display: flex;
+    height: 200px;
+    width: 110%;
+    background-color: white;
+    direction: ltr;
+    overflow: hidden;
+    z-index: 1;
+}
+
+marquee.pro>img{
+	height: 140px;
+	margin: 30px 0 30px 50px;  
+	width: 130px;
+}
+#soc_box{
+	padding-right: 20px;
+	border-radius: 7px;
+	background-color: #eb232f;
+	padding-top: 8px;
+	padding-bottom: 15px;
+    margin: auto;
+}
+div.social_icons{
+	position: relative;
+	margin-top: 7px;
+	height: 35px;
+	width: 35px;
+	outline: none;
+	border-radius: 17px !important;
+	float: left;
+	margin-left: 20px;
+	overflow: hidden;
+}
+#contact_col_1{
+    display: flex; flex-flow: column;
+    margin: auto;
+    margin-top: 60px;
+    margin-right: 60px;
+}
+#contact_col_2{
+    display: flex; flex-flow: column;
+    margin: auto;
+    margin-top: 60px;
+    margin-left: 60px;
+}
+.pi_notification{
+	position: absolute;
+	height: 70px;
+	width: 145px;
+	background-color: white;
+	border-radius: 20px;
+	box-shadow: 0px 0px 17px #444;
+	border:1px solid #555;
+	border-top: 1px solid #888;
+	display: none;
+	padding: 1rem;
+	text-align: center;
+	font-weight: 450;
+	direction: rtl;
+}
+.flex-column{
+    display: flex;
+    flex-flow: column;
+}
+.f-gro{
+    flex-grow: 1;
+}
+.col-md-6{
+    position: relative;
+    float: right;
+    width: 50%;
+}
+.m-5{
+    margin: 4.5rem;
+}
+.mt-5{
+    margin-top: 4.5rem;
+}
+.mr-5{
+    margin-right: 4.5rem;
+}
+#goolin>iframe{height: 350px; width: 350px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1250px){
+	.porto{
+		margin: 110px 180px 110px 180px;
+	}
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 950px){
+    .col-md-6{
+        width: 100%;
+    }
+    .arm{
+        margin: auto;
+        width: 45%;
+    }
+    .col-md-6:first-child{
+        max-height: 50%;
+    }
+    .col-md-6:last-child{
+        max-height: 50%;
+    }
+    .title{
+        margin: 2rem 0 0 0;
+        text-align: center;
+    }
+    .porto{
+    	margin: 100px 50px 100px 50px;
+    }
+    div.contact_row{
+        flex-flow: column;
+    }
+    #contact_col_2{
+        margin: auto !important;
+    }
+    #contact_col_1{
+        margin: auto !important;
+    }
+    #goolin>iframe{height: 250px !important; width: 250px !important;}
+    #contact_col_1>h3,#contact_col_1>p{font-size: 12px !important; line-height: 17px !important;}
+}
+.fill{position: absolute; top: 0px; right: 0px; height: 100%; width: 100%;}
